@@ -43,4 +43,26 @@
         End If
 
     End Sub
+    Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles TextBox1.Click
+        TextBox1.Clear()
+        If CheckBox1.Checked = True Then
+            TextBox1.Text = Clipboard.GetText
+        End If
+    End Sub
+
+    Private Sub FullMoviesOnVimeoGoogleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullMoviesOnVimeoGoogleToolStripMenuItem.Click
+        Process.Start("https://www.reddit.com/r/Fullmoviesonvimeo/")
+    End Sub
+
+    Private Sub FullMoviesOnYoutubeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullMoviesOnYoutubeToolStripMenuItem.Click
+        Process.Start("https://www.reddit.com/r/fullmoviesonyoutube/")
+    End Sub
+
+    Private Sub FullMoviesOnAnythingSlowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullMoviesOnAnythingSlowToolStripMenuItem.Click
+        Process.Start("https://www.reddit.com/r/Fullmoviesonanything/")
+    End Sub
+
+    Private Sub YoutubeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YoutubeToolStripMenuItem.Click
+        Process.Start("Http://youtube.com")
+    End Sub
 End Class
