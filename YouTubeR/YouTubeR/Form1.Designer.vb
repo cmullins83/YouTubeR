@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -42,6 +43,10 @@ Partial Class Form1
         Me.FullMoviesOnVimeoGoogleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullMoviesOnYoutubeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullMoviesOnAnythingSlowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StreamSitesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HttpsseriestopcomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -175,7 +180,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlacesToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlacesToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(350, 24)
@@ -185,7 +190,7 @@ Partial Class Form1
         'PlacesToolStripMenuItem
         '
         Me.PlacesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.PlacesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YoutubeToolStripMenuItem, Me.RedditToolStripMenuItem})
+        Me.PlacesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YoutubeToolStripMenuItem, Me.RedditToolStripMenuItem, Me.StreamSitesToolStripMenuItem})
         Me.PlacesToolStripMenuItem.Name = "PlacesToolStripMenuItem"
         Me.PlacesToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.PlacesToolStripMenuItem.Text = "Places"
@@ -193,14 +198,14 @@ Partial Class Form1
         'YoutubeToolStripMenuItem
         '
         Me.YoutubeToolStripMenuItem.Name = "YoutubeToolStripMenuItem"
-        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.YoutubeToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.YoutubeToolStripMenuItem.Text = "Youtube"
         '
         'RedditToolStripMenuItem
         '
         Me.RedditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FullMoviesOnVimeoGoogleToolStripMenuItem, Me.FullMoviesOnYoutubeToolStripMenuItem, Me.FullMoviesOnAnythingSlowToolStripMenuItem})
         Me.RedditToolStripMenuItem.Name = "RedditToolStripMenuItem"
-        Me.RedditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RedditToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.RedditToolStripMenuItem.Text = "Reddit"
         '
         'FullMoviesOnVimeoGoogleToolStripMenuItem
@@ -221,8 +226,34 @@ Partial Class Form1
         Me.FullMoviesOnAnythingSlowToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.FullMoviesOnAnythingSlowToolStripMenuItem.Text = "FullMoviesOnAnything(Slow)"
         '
+        'StreamSitesToolStripMenuItem
+        '
+        Me.StreamSitesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem, Me.HttpsseriestopcomToolStripMenuItem})
+        Me.StreamSitesToolStripMenuItem.Name = "StreamSitesToolStripMenuItem"
+        Me.StreamSitesToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.StreamSitesToolStripMenuItem.Text = "Stream Sites"
+        '
+        'Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem
+        '
+        Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem.Name = "Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem"
+        Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem.Text = "watchtvserieslive.org"
+        '
+        'HttpsseriestopcomToolStripMenuItem
+        '
+        Me.HttpsseriestopcomToolStripMenuItem.Name = "HttpsseriestopcomToolStripMenuItem"
+        Me.HttpsseriestopcomToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.HttpsseriestopcomToolStripMenuItem.Text = "series-top"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.HelpToolStripMenuItem.Text = "Contact"
+        '
         'Form1
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(350, 210)
@@ -233,6 +264,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "YouTubeR"
@@ -268,4 +300,8 @@ Partial Class Form1
     Friend WithEvents FullMoviesOnVimeoGoogleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FullMoviesOnYoutubeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FullMoviesOnAnythingSlowToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StreamSitesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HttpsseriestopcomToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
 End Class

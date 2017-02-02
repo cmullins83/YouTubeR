@@ -65,4 +65,16 @@
     Private Sub YoutubeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YoutubeToolStripMenuItem.Click
         Process.Start("Http://youtube.com")
     End Sub
+
+    Private Sub Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem.Click
+        Process.Start("http://ww1.watchtvserieslive.org/watch-tv-series/")
+    End Sub
+
+    Private Sub HttpsseriestopcomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HttpsseriestopcomToolStripMenuItem.Click
+        Process.Start("https://series-top.com/")
+    End Sub
+
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+        Process.Start("mailto:chris@madmullins.com")
+    End Sub
 End Class
