@@ -17,7 +17,11 @@
             Option2 = "--abort-on-error "
         End If
         ProgOptions = Option1 & Option2
-        Process.Start(YoutubeDL, " " & ProgOptions & TextBox1.Text)
+        Try
+            Process.Start(YoutubeDL, " " & ProgOptions & TextBox1.Text)
+        Catch ex As Exception
+            Process.Start("https://rg3.github.io/youtube-dl/download.html")
+        End Try
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
