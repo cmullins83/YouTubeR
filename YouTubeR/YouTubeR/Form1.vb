@@ -81,4 +81,8 @@
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
         Process.Start("mailto:chris@madmullins.com")
     End Sub
+
+    Private Sub UpdateYoutubeDLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateYoutubeDLToolStripMenuItem.Click
+        Process.Start("Youtube-dl", " -U")
+    End Sub
 End Class

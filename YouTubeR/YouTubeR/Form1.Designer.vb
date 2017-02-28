@@ -47,6 +47,9 @@ Partial Class Form1
         Me.Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HttpsseriestopcomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateYoutubeDLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateYouTubeRToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -180,7 +183,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlacesToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlacesToolStripMenuItem, Me.UpdateToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(350, 24)
@@ -251,6 +254,26 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.HelpToolStripMenuItem.Text = "Contact"
         '
+        'UpdateToolStripMenuItem
+        '
+        Me.UpdateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateYoutubeDLToolStripMenuItem, Me.UpdateYouTubeRToolStripMenuItem})
+        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.UpdateToolStripMenuItem.Text = "Update"
+        '
+        'UpdateYoutubeDLToolStripMenuItem
+        '
+        Me.UpdateYoutubeDLToolStripMenuItem.Name = "UpdateYoutubeDLToolStripMenuItem"
+        Me.UpdateYoutubeDLToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UpdateYoutubeDLToolStripMenuItem.Text = "Update Youtube-DL"
+        '
+        'UpdateYouTubeRToolStripMenuItem
+        '
+        Me.UpdateYouTubeRToolStripMenuItem.Enabled = False
+        Me.UpdateYouTubeRToolStripMenuItem.Name = "UpdateYouTubeRToolStripMenuItem"
+        Me.UpdateYouTubeRToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UpdateYouTubeRToolStripMenuItem.Text = "Update YouTubeR"
+        '
         'Form1
         '
         Me.AcceptButton = Me.Button1
@@ -304,4 +327,7 @@ Partial Class Form1
     Friend WithEvents Httpww1watchtvseriesliveorgwatchtvseriesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HttpsseriestopcomToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateYoutubeDLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateYouTubeRToolStripMenuItem As ToolStripMenuItem
 End Class
