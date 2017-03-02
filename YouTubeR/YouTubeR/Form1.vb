@@ -103,5 +103,11 @@
         startProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
         startProcess.StartInfo.CreateNoWindow = True
         startProcess.Start()
+        startProcess.WaitForExit()
+        If startProcess.ExitCode = 0 Then
+            MessageBox.Show("Update Complete")
+        Else
+            MessageBox.Show("Update Failed")
+        End If
     End Sub
 End Class
