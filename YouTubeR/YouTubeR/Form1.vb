@@ -5,7 +5,9 @@
     Public Property ProgOptions As String
     Public Property OutputPath As String
     Public Property YoutubeDL As String
+    Dim startProcess As System.Diagnostics.Process = New System.Diagnostics.Process()
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim ProgArguments As String
         YoutubeDL = "youtube-dl.exe"
         If RadioButton1.Checked = False Then
             Option1 = " -o " + "%(title)s.%(ext)s --extract-audio --audio-format mp3 "
@@ -17,10 +19,22 @@
             Option2 = "--abort-on-error "
         End If
         ProgOptions = Option1 & Option2
+        ProgArguments = " " & ProgOptions & TextBox1.Text
         Try
-            Process.Start(YoutubeDL, " " & ProgOptions & TextBox1.Text)
+            startProcess.StartInfo.FileName = "Youtube-dl"
+            startProcess.StartInfo.Arguments = ProgArguments
+            'startProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            'startProcess.StartInfo.CreateNoWindow = True
+            startProcess.Start()
+            startProcess.WaitForExit()
+            If startProcess.ExitCode = 0 Then
+                MessageBox.Show("Download Complete")
+            Else
+                MessageBox.Show("Download Failed")
+            End If
+
         Catch ex As Exception
-            Process.Start("https://rg3.github.io/youtube-dl/download.html")
+            Process.Start("https//rg3.github.io/youtube-dl/download.html")
         End Try
     End Sub
 
@@ -83,6 +97,11 @@
     End Sub
 
     Private Sub UpdateYoutubeDLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateYoutubeDLToolStripMenuItem.Click
-        Process.Start("Youtube-dl", " -U")
+        Dim startProcess As System.Diagnostics.Process = New System.Diagnostics.Process()
+        startProcess.StartInfo.FileName = "Youtube-dl"
+        startProcess.StartInfo.Arguments = "-U"
+        startProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+        startProcess.StartInfo.CreateNoWindow = True
+        startProcess.Start()
     End Sub
 End Class
